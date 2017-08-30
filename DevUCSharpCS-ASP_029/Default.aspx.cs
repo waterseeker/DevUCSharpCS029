@@ -30,22 +30,22 @@ namespace DevUCSharpCS_ASP_029
 
         protected void fromGallonsRadio_CheckedChanged(object sender, EventArgs e)
         {
-            calculateCups();
+            calculateCups(16.0);
         }
 
         protected void fromQuartsRadio_CheckedChanged(object sender, EventArgs e)
         {
-            calculateCups();
+            calculateCups(4.0);
         }
 
         protected void fromPintsRadio_CheckedChanged(object sender, EventArgs e)
         {
-            calculateCups();
+            calculateCups(2.0);
         }
 
         protected void fromCupsRadio_CheckedChanged(object sender, EventArgs e)
         {
-            calculateCups();
+            calculateCups(1.0);
         }
 
         protected void quantityTextBox_TextChanged(object sender, EventArgs e)
