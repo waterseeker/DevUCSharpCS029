@@ -14,7 +14,7 @@ namespace DevUCSharpCS_ASP_029
 
         }
 
-        private void calculateCups()
+        private void calculateCups(double measureToCupRatio)
         {
             if (quantityTextBox.Text.Trim().Length == 0)
                 return;
@@ -23,12 +23,7 @@ namespace DevUCSharpCS_ASP_029
             if (!Double.TryParse(quantityTextBox.Text, out quantity))
                 return;
 
-            double cups = 0.0;
-
-            if (fromCupsRadio.Checked) cups = quantity;
-            else if (fromPintsRadio.Checked) cups = quantity * 2;
-            else if (fromQuartsRadio.Checked) cups = quantity * 4;
-            else if (fromGallonsRadio.Checked) cups = quantity * 16;
+            double cups = quantity * measureToCupRatio;
 
             resultLabel.Text = "The number of cups: " + cups.ToString();
         }
