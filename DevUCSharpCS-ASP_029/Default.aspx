@@ -11,6 +11,9 @@
         <div>
             Convert to Cups:<br />
             <br />
+            <asp:TextBox ID="quantityTextBox" runat="server" AutoPostBack="True" OnTextChanged="quantityTextBox_TextChanged"></asp:TextBox>
+            <br />
+            <br />
             <asp:RadioButton ID="fromCupsRadio" runat="server" AutoPostBack="True" GroupName="FromGroup" OnCheckedChanged="fromCupsRadio_CheckedChanged" Text="Cups" />
             <br />
             <asp:RadioButton ID="fromPintsRadio" runat="server" AutoPostBack="True" GroupName="FromGroup" OnCheckedChanged="fromPintsRadio_CheckedChanged" Text="Pints" />
